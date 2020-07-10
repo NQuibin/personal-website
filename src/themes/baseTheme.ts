@@ -12,7 +12,6 @@ const baseTheme: Theme = createMuiTheme({
     fontFamily: [
       '"Catamaran"',
       '"Lato"',
-      '"Permanent Marker"',
       'BlinkMacSystemFont',
       '"Segoe UI"',
       'Roboto',

@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PRIMARY_COLOUR, SECONDARY_COLOUR } from 'src/constants/styles'
+import {
+  PRIMARY_COLOUR,
+  SECONDARY_COLOUR,
+  PRIMARY_FONT,
+} from 'src/constants/styles'
 
 export const SH2 = styled.h2`
   color: ${PRIMARY_COLOUR};
-  font-family: 'Lato', sans-serif;
+  font-family: ${PRIMARY_FONT};
   font-size: 1.5rem;
+  font-style: italic;
 `
 
 export const SH3 = styled(props => <SH2 as="h3" {...props} />)`
