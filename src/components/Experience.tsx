@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Grid } from '@material-ui/core'
 import { SH2, SH3, SH4, SP } from 'src/components/Text'
+import AssetIcon from 'src/components/AssetIcon'
 
 interface ExperienceData {
   key: string
@@ -10,6 +11,7 @@ interface ExperienceData {
   location: string
   duration: string
   description: string
+  stack: string[]
 }
 
 const experience: ExperienceData[] = [
@@ -22,6 +24,7 @@ const experience: ExperienceData[] = [
     description: `An all-in-one practice growth solution software by automating 
       and enhancing the patient journey. Currently developing microservices 
       to allow practices to manage their patients.`,
+    stack: ['vue', 'python', 'postgreSQL', 'awsLambda'],
   },
   {
     key: 'loopio',
@@ -33,6 +36,7 @@ const experience: ExperienceData[] = [
       DDQs, and Security Questionnaires. My team created third party 
       integrations (Slack, Salesforce, MS Dynamics, etc), reports, and 
       dashboards.`,
+    stack: ['react', 'codeIgniter', 'mySQL', 'apache'],
   },
   {
     key: 'CRA',
@@ -43,6 +47,7 @@ const experience: ExperienceData[] = [
     description: `Agency for the Government of Canada that administer tax laws 
       (the IRS of Canada). My role was to develop tools and macros to help 
       auditors automate their daily tasks.`,
+    stack: ['visualBasic', 'msOffice', 'python'],
   },
   {
     key: 'DRDC',
@@ -53,6 +58,7 @@ const experience: ExperienceData[] = [
     description: `The Department of National Defense for the Government of 
       Canada. I helped researchers create applications to record and analyze 
       their result data.`,
+    stack: ['java'],
   },
 ]
 
@@ -62,19 +68,21 @@ const SDivider = styled.span`
 
 const Experience: React.FC = () => {
   return (
-    <Grid>
+    <Grid container justify="center" spacing={3}>
       <Grid item xs={12}>
         <SH2>Where I've Worked.</SH2>
       </Grid>
       {experience.map(exp => (
-        <Grid item xs={12} key={exp.key}>
+        <Grid item xs={12} sm={5} key={exp.key}>
           <SH3>
             {exp.name} <SDivider>|</SDivider> {exp.role}
           </SH3>
-          <SH4>
-            {exp.location} <SDivider>-</SDivider> {exp.duration}
-          </SH4>
+          <SH4>{exp.location}</SH4>
+          <SH4>{exp.duration}</SH4>
           <SP>{exp.description}</SP>
+          {exp.stack.map(name => (
+            <AssetIcon key={name} name={name} />
+          ))}
         </Grid>
       ))}
     </Grid>

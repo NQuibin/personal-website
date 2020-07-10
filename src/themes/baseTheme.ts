@@ -23,6 +23,13 @@ const baseTheme: Theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"'
     ].join(',')
+  },
+  overrides: {
+    MuiTooltip: {
+      tooltip: {
+        fontSize: "1rem",
+      }
+    }
   }
 })
 

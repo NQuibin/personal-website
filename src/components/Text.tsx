@@ -8,12 +8,12 @@ export const SH2 = styled.h2`
   font-size: 1.5rem;
 `
 
-export const SH3 = styled(({ ...props }) => <SH2 as="h3" { ...props } />)`
+export const SH3 = styled(props => <SH2 as="h3" {...props} />)`
   color: ${SECONDARY_COLOUR};
   font-size: 1.3rem;
 `
 
-export const SH4 = styled(({ ...props }) => <SH2 as="h4" { ...props } />)`
+export const SH4 = styled(props => <SH2 as="h4" {...props} />)`
   font-size: 1.15rem;
   font-weight: normal;
   color: #000;
