@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Fade } from 'react-awesome-reveal'
 import { Grid } from '@material-ui/core'
 import { SH2, SH3, SH4, SP } from 'src/components/Text'
 import AssetIcon from 'src/components/AssetIcon'
@@ -70,19 +71,23 @@ const Experience: React.FC = () => {
   return (
     <Grid container justify="center" spacing={3}>
       <Grid item xs={12}>
-        <SH2>Where I've Worked.</SH2>
+        <Fade triggerOnce direction="top">
+          <SH2>Where I've Worked.</SH2>
+        </Fade>
       </Grid>
       {experience.map(exp => (
         <Grid item xs={12} sm={5} key={exp.key}>
-          <SH3>
-            {exp.name} <SDivider>|</SDivider> {exp.role}
-          </SH3>
-          <SH4>{exp.location}</SH4>
-          <SH4>{exp.duration}</SH4>
-          <SP>{exp.description}</SP>
-          {exp.stack.map(name => (
-            <AssetIcon key={name} name={name} />
-          ))}
+          <Fade triggerOnce direction="top">
+            <SH3>
+              {exp.name} <SDivider>|</SDivider> {exp.role}
+            </SH3>
+            <SH4>{exp.location}</SH4>
+            <SH4>{exp.duration}</SH4>
+            <SP>{exp.description}</SP>
+            {exp.stack.map(name => (
+              <AssetIcon key={name} name={name} />
+            ))}
+          </Fade>
         </Grid>
       ))}
     </Grid>

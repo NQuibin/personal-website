@@ -6,6 +6,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import DescriptionIcon from '@material-ui/icons/Description'
 import PageContainer from 'src/components/PageContainer'
+import { Fade } from 'react-awesome-reveal'
 import { SH2 } from 'src/components/Text'
 import { PRIMARY_COLOUR } from 'src/constants/styles'
 import resume from 'src/assets/nikki_quibin_resume_2020-02-06.pdf'
@@ -82,41 +83,43 @@ const SCopyright = styled.p`
 
 const Footer: React.FC = () => {
   return (
-    <SWrapper>
-      <PageContainer>
-        <Grid container>
-          <Grid item xs={12}>
-            <SMessage>
-              I'm available for freelance work! Let's get in touch.
-            </SMessage>
-            <SEmailButton
-              variant="contained"
-              href="mailto:nikki.quibin@gmail.com"
-              startIcon={<MailOutlineIcon />}
-            >
-              Email Me
-            </SEmailButton>
-          </Grid>
-          <Grid item xs={12}>
-            {links.map(link => (
-              <SIconLink
-                key={link.key}
-                href={link.href}
-                title={link.label}
-                aria-label={link.label}
+    <Fade triggerOnce direction="top">
+      <SWrapper>
+        <PageContainer>
+          <Grid container>
+            <Grid item xs={12}>
+              <SMessage>
+                I'm available for freelance work! Let's get in touch.
+              </SMessage>
+              <SEmailButton
+                variant="contained"
+                href="mailto:nikki.quibin@gmail.com"
+                startIcon={<MailOutlineIcon />}
               >
-                {link.icon}
-              </SIconLink>
-            ))}
+                Email Me
+              </SEmailButton>
+            </Grid>
+            <Grid item xs={12}>
+              {links.map(link => (
+                <SIconLink
+                  key={link.key}
+                  href={link.href}
+                  title={link.label}
+                  aria-label={link.label}
+                >
+                  {link.icon}
+                </SIconLink>
+              ))}
+            </Grid>
+            <Grid item xs={12}>
+              <SCopyright>
+                © 2020 <span>Nikki Quibin</span>. All rights reserved.
+              </SCopyright>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <SCopyright>
-              © 2020 <span>Nikki Quibin</span>. All rights reserved.
-            </SCopyright>
-          </Grid>
-        </Grid>
-      </PageContainer>
-    </SWrapper>
+        </PageContainer>
+      </SWrapper>
+    </Fade>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
+import { Fade } from 'react-awesome-reveal'
 import { SH2 } from 'src/components/Text'
 import { HEADER_FONT, TEXT_SHADOW } from 'src/constants/styles'
 import headerBackground from 'src/assets/header_background.jpg'
@@ -43,8 +44,10 @@ const Header: React.FC = () => {
     <SGridContainer direction="column" alignItems="center" justify="center">
       <SCover />
       <SGridItem item>
-        <SGreeting>Hello, I'm</SGreeting>
-        <SBrandHeader>Nik Quibin</SBrandHeader>
+        <Fade triggerOnce cascade direction="bottom">
+          <SGreeting>Hello, I'm</SGreeting>
+          <SBrandHeader>Nik Quibin</SBrandHeader>
+        </Fade>
       </SGridItem>
     </SGridContainer>
   )
