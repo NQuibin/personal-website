@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Fade } from 'react-awesome-reveal'
 import { Grid } from '@material-ui/core'
+import { RevealFade } from 'src/components/Reveal'
 import { SH2, SH3, SH4, SP } from 'src/components/Text'
 import AssetIcon from 'src/components/AssetIcon'
 
@@ -71,13 +71,13 @@ const Experience: React.FC = () => {
   return (
     <Grid container justify="center" spacing={3}>
       <Grid item xs={12}>
-        <Fade triggerOnce direction="bottom">
+        <RevealFade direction="bottom">
           <SH2>Where I've Worked.</SH2>
-        </Fade>
+        </RevealFade>
       </Grid>
       {experience.map((exp, i) => (
         <Grid item xs={12} sm={5} key={exp.key}>
-          <Fade triggerOnce cascade direction={i % 2 === 0 ? 'left' : 'right'}>
+          <RevealFade direction={i % 2 === 0 ? 'left' : 'right'}>
             <SH3>
               {exp.name} <SDivider>|</SDivider> {exp.role}
             </SH3>
@@ -89,7 +89,7 @@ const Experience: React.FC = () => {
                 <AssetIcon key={name} name={name} />
               ))}
             </div>
-          </Fade>
+          </RevealFade>
         </Grid>
       ))}
     </Grid>

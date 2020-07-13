@@ -6,10 +6,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import DescriptionIcon from '@material-ui/icons/Description'
 import PageContainer from 'src/components/PageContainer'
-import { Fade } from 'react-awesome-reveal'
+import { RevealFade } from 'src/components/Reveal'
 import { SH2 } from 'src/components/Text'
 import { PRIMARY_COLOUR } from 'src/constants/styles'
-import resume from 'src/assets/nikki_quibin_resume_2020-02-06.pdf'
+import resume from 'src/assets/nikki_quibin_resume_2020-07-13.pdf'
 
 interface LinkData {
   key: string
@@ -83,7 +83,7 @@ const SCopyright = styled.p`
 
 const Footer: React.FC = () => {
   return (
-    <Fade triggerOnce direction="top">
+    <RevealFade direction="top">
       <SWrapper>
         <PageContainer>
           <Grid container>
@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
           </Grid>
         </PageContainer>
       </SWrapper>
-    </Fade>
+    </RevealFade>
   )
 }
 

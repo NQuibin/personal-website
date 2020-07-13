@@ -1,14 +1,14 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
-import { Fade } from 'react-awesome-reveal'
+import { RevealFade } from 'src/components/Reveal'
 import { SH2 } from 'src/components/Text'
 import { HEADER_FONT, TEXT_SHADOW } from 'src/constants/styles'
 import headerBackground from 'src/assets/header_background.jpg'
 
 const SGridContainer = styled(props => <Grid container {...props} />)`
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
   background-image: url(${headerBackground});
 `
 
@@ -44,10 +44,11 @@ const Header: React.FC = () => {
     <SGridContainer direction="column" alignItems="center" justify="center">
       <SCover />
       <SGridItem item>
-        <Fade triggerOnce cascade direction="bottom">
+        <RevealFade direction="bottom">
           <SGreeting>Hello, I'm</SGreeting>
           <SBrandHeader>Nik Quibin</SBrandHeader>
-        </Fade>
+          <SGreeting>Software Developer</SGreeting>
+        </RevealFade>
       </SGridItem>
     </SGridContainer>
   )
