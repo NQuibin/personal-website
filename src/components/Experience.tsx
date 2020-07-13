@@ -71,22 +71,24 @@ const Experience: React.FC = () => {
   return (
     <Grid container justify="center" spacing={3}>
       <Grid item xs={12}>
-        <Fade triggerOnce direction="top">
+        <Fade triggerOnce direction="bottom">
           <SH2>Where I've Worked.</SH2>
         </Fade>
       </Grid>
-      {experience.map(exp => (
+      {experience.map((exp, i) => (
         <Grid item xs={12} sm={5} key={exp.key}>
-          <Fade triggerOnce direction="top">
+          <Fade triggerOnce cascade direction={i % 2 === 0 ? 'left' : 'right'}>
             <SH3>
               {exp.name} <SDivider>|</SDivider> {exp.role}
             </SH3>
             <SH4>{exp.location}</SH4>
             <SH4>{exp.duration}</SH4>
             <SP>{exp.description}</SP>
-            {exp.stack.map(name => (
-              <AssetIcon key={name} name={name} />
-            ))}
+            <div>
+              {exp.stack.map(name => (
+                <AssetIcon key={name} name={name} />
+              ))}
+            </div>
           </Fade>
         </Grid>
       ))}

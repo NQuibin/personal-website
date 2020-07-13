@@ -22,7 +22,7 @@ const About: React.FC = () => {
         </Zoom>
       </Grid>
       <Grid item xs={12} sm={7}>
-        <Fade triggerOnce direction="top">
+        <Fade triggerOnce direction="bottom">
           <SP>
             I'm a software developer based in Toronto, Canada. Coding is one of my
             favourite things to do since it allows me to build beautiful and
@@ -32,12 +32,12 @@ const About: React.FC = () => {
         </Fade>
       </Grid>
       <Grid item xs={12}>
-        <Fade triggerOnce direction="top">
+        <Fade triggerOnce direction="bottom">
           <SH2>I can help you with...</SH2>
         </Fade>
       </Grid>
       <Grid item xs={12} sm={5}>
-        <Fade triggerOnce cascade direction="top">
+        <Fade triggerOnce cascade direction="left">
           <SH3>Developing applications.</SH3>
           <SP>
             I focus mainly on web development, so I can help you create websites
@@ -46,7 +46,7 @@ const About: React.FC = () => {
         </Fade>
       </Grid>
       <Grid item xs={12} sm={5}>
-        <Fade triggerOnce cascade direction="top">
+        <Fade triggerOnce cascade direction="right">
           <SH3>Learning how to code.</SH3>
           <SP>
             Coding as a skill is a great asset to have and it shouldn't be a
