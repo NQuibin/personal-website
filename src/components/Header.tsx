@@ -29,7 +29,6 @@ const SCover = styled.div`
 const SGreeting = styled(SH2)`
   margin: 0 2rem;
   font-family: ${GREETING_FONT};
-  font-size: 2rem;
   text-shadow: ${TEXT_SHADOW};
   color: #fff;
 `
