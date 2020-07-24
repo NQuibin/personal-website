@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 import { RevealFade } from 'src/components/Reveal'
 import { SH2 } from 'src/components/Text'
-import { HEADER_FONT, GREETING_FONT, TEXT_SHADOW } from 'src/constants/styles'
+import { HEADER_FONT, TEXT_SHADOW } from 'src/constants/styles'
 import headerBackground from 'src/assets/header_background.jpg'
 
 const SGridContainer = styled(props => <Grid container {...props} />)`
@@ -13,8 +13,9 @@ const SGridContainer = styled(props => <Grid container {...props} />)`
 `
 
 const SGridItem = styled(props => <Grid item {...props} />)`
-  text-align: center;
   z-index: 99;
+  padding: 1rem;
+  text-align: center;
 `
 
 const SCover = styled.div`
@@ -26,17 +27,18 @@ const SCover = styled.div`
   background-color: rgb(164, 102, 78, 0.6);
 `
 
-const SGreeting = styled(SH2)`
-  margin: 0 2rem;
-  font-family: ${GREETING_FONT};
+const SGreeting = styled.h1`
+  margin: 0 0 2rem 0;
+  font-family: ${HEADER_FONT};
+  font-size: 5rem;
   text-shadow: ${TEXT_SHADOW};
   color: #fff;
 `
 
-const SBrandHeader = styled.h1`
-  margin: 2rem;
+const SJobTitle = styled(SH2)`
+  margin: 0;
   font-family: ${HEADER_FONT};
-  font-size: 5rem;
+  font-size: 2.5rem;
   text-shadow: ${TEXT_SHADOW};
   color: #fff;
 `
@@ -47,9 +49,8 @@ const Header: React.FC = () => {
       <SCover />
       <SGridItem item>
         <RevealFade direction="bottom">
-          <SGreeting>Hello, I'm</SGreeting>
-          <SBrandHeader>Nik Quibin</SBrandHeader>
-          <SGreeting>Software Developer</SGreeting>
+          <SGreeting>Hello,&nbsp;I'm Nik&nbsp;Quibin</SGreeting>
+          <SJobTitle>Software Developer</SJobTitle>
         </RevealFade>
       </SGridItem>
     </SGridContainer>
