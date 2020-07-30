@@ -2,7 +2,6 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 import { RevealFade } from 'src/components/Reveal'
-import { SH2 } from 'src/components/Text'
 import { HEADER_FONT, TEXT_SHADOW } from 'src/constants/styles'
 import headerBackground from 'src/assets/header_background.jpg'
 
@@ -16,6 +15,9 @@ const SGridItem = styled(props => <Grid item {...props} />)`
   z-index: 99;
   padding: 1rem;
   text-align: center;
+  font-family: ${HEADER_FONT};
+  text-shadow: ${TEXT_SHADOW};
+  color: #fff;
 `
 
 const SCover = styled.div`
@@ -27,20 +29,13 @@ const SCover = styled.div`
   background-color: rgb(164, 102, 78, 0.6);
 `
 
-const SGreeting = styled.h1`
+const SName = styled.h1`
   margin: 0 0 2rem 0;
-  font-family: ${HEADER_FONT};
   font-size: 5rem;
-  text-shadow: ${TEXT_SHADOW};
-  color: #fff;
 `
 
-const SJobTitle = styled(SH2)`
-  margin: 0;
-  font-family: ${HEADER_FONT};
-  font-size: 2.5rem;
-  text-shadow: ${TEXT_SHADOW};
-  color: #fff;
+const SGreeting = styled.h2`
+  font-size: 1.75rem;
 `
 
 const Header: React.FC = () => {
@@ -49,8 +44,8 @@ const Header: React.FC = () => {
       <SCover />
       <SGridItem item>
         <RevealFade direction="bottom">
-          <SGreeting>Hello,&nbsp;I'm Nik&nbsp;Quibin</SGreeting>
-          <SJobTitle>Software Developer</SJobTitle>
+          <SGreeting>Hello, I'm</SGreeting>
+          <SName>Nikki Quibin</SName>
         </RevealFade>
       </SGridItem>
     </SGridContainer>

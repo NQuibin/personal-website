@@ -6,7 +6,7 @@ import { SH2, SH3, SP } from 'src/components/Text'
 import headshot from 'src/assets/headshot.jpg'
 
 const SHeadshot = styled.img`
-  margin: 4rem auto 2rem auto;
+  margin: 0 auto 2rem auto;
   width: 100%;
   max-width: 300px;
   border-radius: 100%;
