@@ -10,7 +10,7 @@ export const RevealFade: React.FC<Props> = ({
   direction = undefined,
 }) => {
   return (
-    <Fade triggerOnce cascade duration={600} direction={direction}>
+    <Fade triggerOnce cascade duration={400} direction={direction}>
       {children}
     </Fade>
   )
@@ -21,7 +21,7 @@ export const RevealZoom: React.FC<Props> = ({
   direction = undefined,
 }) => {
   return (
-    <Zoom triggerOnce cascade duration={600} direction={direction}>
+    <Zoom triggerOnce cascade duration={400} direction={direction}>
       {children}
     </Zoom>
   )

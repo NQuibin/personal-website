@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, useMediaQuery, useTheme } from '@material-ui/core'
 import styled from 'styled-components'
 import { RevealFade } from 'src/components/Reveal'
 import { HEADER_FONT, TEXT_SHADOW } from 'src/constants/styles'
@@ -29,9 +29,9 @@ const SCover = styled.div`
   background-color: rgb(164, 102, 78, 0.6);
 `
 
-const SName = styled.h1`
+const SName = styled.h1<{ isXsAndDown: boolean }>`
   margin: 0 0 2rem 0;
-  font-size: 5rem;
+  font-size: ${props => (props.isXsAndDown ? '3rem' : '5rem')};
 `
 
 const SGreeting = styled.h2`
@@ -39,13 +39,16 @@ const SGreeting = styled.h2`
 `
 
 const Header: React.FC = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('xs'))
+
   return (
     <SGridContainer direction="column" alignItems="center" justify="center">
       <SCover />
       <SGridItem item>
         <RevealFade direction="bottom">
           <SGreeting>Hello, I'm</SGreeting>
-          <SName>Nikki Quibin</SName>
+          <SName isXsAndDown={matches}>Nikki Quibin</SName>
         </RevealFade>
       </SGridItem>
     </SGridContainer>
