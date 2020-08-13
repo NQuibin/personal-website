@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { RevealZoom } from './Reveal'
 
 const Dot = styled.div`
   display: inline-block;
@@ -13,7 +14,7 @@ const Dot = styled.div`
 const Divider: React.FC = () => {
   const dots = [...Array(5)].map((_, i) => <Dot key={i} />)
 
-  return <>{dots}</>
+  return <RevealZoom duration={200}>{dots}</RevealZoom>
 }
 
 export default Divider
