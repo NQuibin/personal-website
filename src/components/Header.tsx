@@ -31,7 +31,7 @@ const SCover = styled.div`
 
 const SName = styled.h1<{ isXsAndDown: boolean }>`
   margin: 0 0 2rem 0;
-  font-size: ${props => (props.isXsAndDown ? '3rem' : '5rem')};
+  font-size: ${props => (props.isXsAndDown ? '3.75rem' : '5rem')};
 `
 
 const SGreeting = styled.h2`
