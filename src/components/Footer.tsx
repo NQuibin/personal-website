@@ -9,7 +9,7 @@ import PageContainer from 'src/components/PageContainer'
 import { RevealFade } from 'src/components/Reveal'
 import { SH2 } from 'src/components/Text'
 import { PRIMARY_COLOUR } from 'src/constants/styles'
-import resume from 'src/assets/nikki_quibin_resume_2020-07-13.pdf'
+import resume from 'src/assets/nikki_quibin_resume_2020-09-09.pdf'
 
 interface LinkData {
   key: string
