@@ -10,6 +10,7 @@ import { RevealFade } from 'src/components/Reveal'
 import { SH2 } from 'src/components/Text'
 import { PRIMARY_COLOUR } from 'src/constants/styles'
 import resume from 'src/assets/nikki_quibin_resume_2020-09-09.pdf'
+import { trackEvent } from 'src/utils/analytics'
 
 interface LinkData {
   key: string
@@ -82,6 +83,10 @@ const SCopyright = styled.p`
 `
 
 const Footer: React.FC = () => {
+  const track = (link: LinkData) => {
+    trackEvent('External Link', 'Click', link.label)
+  }
+
   return (
     <RevealFade direction="top">
       <SWrapper>
@@ -106,6 +111,7 @@ const Footer: React.FC = () => {
                   href={link.href}
                   title={link.label}
                   aria-label={link.label}
+                  onClick={() => track(link)}
                 >
                   {link.icon}
                 </SIconLink>
