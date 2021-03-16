@@ -7,3 +7,4 @@
 import '@fontsource/roboto-condensed/700.css';
 import '@fontsource/cabin/400.css';
 import './src/styles/global.scss';
+import  'aos/dist/aos.css';

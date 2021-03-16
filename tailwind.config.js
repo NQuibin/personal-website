@@ -12,7 +12,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      margin: ['last'],
+    },
   },
   plugins: [
     plugin(({ addBase, theme }) => {
@@ -22,23 +24,23 @@ module.exports = {
         },
         'h1, h2, h3, h4, h5, h6': { fontFamily: theme('fontFamily.roboto') },
         h1: {
+          fontSize: theme('fontSize.5xl'),
+        },
+        h2: {
           fontSize: theme('fontSize.4xl'),
           lineHeight: theme('lineHeight.10'),
         },
-        h2: {
-          fontSize: theme('fontSize.3xl'),
-          lineHeight: theme('lineHeight.9'),
-        },
         h3: {
+          fontSize: theme('fontSize.2xl'),
+          lineHeight: theme('lineHeight.8'),
+        },
+        h4: {
           fontSize: theme('fontSize.xl'),
           lineHeight: theme('lineHeight.7'),
         },
-        h4: {
+        p: {
           fontSize: theme('fontSize.lg'),
           lineHeight: theme('lineHeight.7'),
-        },
-        p: {
-          lineHeight: theme('lineHeight.6'),
         },
       });
     }),

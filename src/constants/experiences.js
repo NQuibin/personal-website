@@ -61,7 +61,7 @@ export const experiences = [
     duration: 'Jan. 2021 - Present',
     description: `A partner relationship management (PRM) platform that also helps
         companies build new revenue channels. Currently developing external APIs
-        for public use, and connectors for iPaaS software, Workato in particular.`,
+        for customer use, and connectors for iPaaS software, Workato in particular.`,
     techStack: [
       technologies.vue,
       technologies.flask,
@@ -77,6 +77,7 @@ export const experiences = [
     description: `An all-in-one practice growth solution software by automating and
         enhancing the patient journey. Built microservices to manage practice websites,
         patients, and tools such as payments and faxing.`,
+    link: 'https://www.patientpop.com/',
     techStack: [
       technologies.vue,
       technologies.python,
@@ -92,6 +93,7 @@ export const experiences = [
     description: `Software to streamline the way organizations respond to RFPs, 
         DDQs, and Security Questionnaires. My team developed third party integrations 
         (Slack, Salesforce, MS Dynamics, etc), reports, and dashboards.`,
+    link: 'https://loopio.com/',
     techStack: [
       technologies.reactjs,
       technologies.codeigniter,
@@ -107,6 +109,7 @@ export const experiences = [
     description: `Agency for the Government of Canada that administer tax laws 
         (the IRS of Canada). My role was to develop tools and macros to help 
         auditors automate their daily tasks.`,
+    link: 'https://www.canada.ca/en/revenue-agency.html',
     techStack: [technologies.python, technologies.vba, technologies.msOffice],
   },
   {
@@ -117,6 +120,7 @@ export const experiences = [
     description: `The Department of National Defense for the Government of Canada. 
         I helped researchers create applications to record and analyze their result 
         data.`,
+    link: 'https://www.canada.ca/en/defence-research-development.html',
     techStack: [technologies.java],
   },
 ];
