@@ -17,6 +17,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'files',
+        path: `${__dirname}/src/assets/files`,
+      },
+    },
+    {
       resolve: 'gatsby-alias-imports',
       options: {
         aliases: {
@@ -34,12 +41,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/
-        }
-      }
-    }
+          include: /assets/,
+        },
+      },
+    },
   ],
 };

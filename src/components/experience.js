@@ -13,9 +13,9 @@ const Experience = () => {
             className="pb-10 md:w-1/2 md:p-6 lg:w-1/3"
             key={index}
             data-aos="fade-up"
-            data-aos-delay={200 + (index + 1) * 100}
+            data-aos-delay={(index + 1) * 100}
           >
-            <h3 className="mb-4 text-purple-600">
+            <h3 className="mb-4 text-purple-500">
               <a
                 href={experience.link}
                 target="_blank"

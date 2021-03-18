@@ -25,7 +25,10 @@ const About = () => {
   return (
     <Section title="Who I Am">
       <article className="flex flex-wrap items-center justify-center pb-10 md:flex-nowrap md:p-6 md:mx-auto md:text-center">
-        <div className="mb-10 md:mb-0" data-aos="zoom-in-up">
+        <div
+          className="rounded-full shadow-2xl bg-purple-700 mb-10 md:mb-0"
+          data-aos="zoom-in-up"
+        >
           <StaticImage
             src="../images/nikki-quibin-headshot.jpeg"
             alt="nikki quibin headshot"
@@ -61,13 +64,12 @@ const About = () => {
               <li
                 key={index}
                 className="flex justify-center mb-4 px-2 last:mb-0 md:inline-flex md:w-1/3 md:mb-0"
-                // className="flex items-center justify-center mb-4 last:mb-0 md:inline-flex md:w-1/2 lg:w-1/3 lg:mb-0"
                 data-aos="fade-up"
-                data-aos-delay={200 + (index + 1) * 100}
+                data-aos-delay={(index + 1) * 100}
               >
                 <section className="text-center">
                   <ValueIcon className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-purple-600">{value.name}</h4>
+                  <h4 className="text-purple-500">{value.name}</h4>
                   <p>{value.description}</p>
                 </section>
               </li>

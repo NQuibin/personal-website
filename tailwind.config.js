@@ -24,7 +24,7 @@ module.exports = {
         },
         'h1, h2, h3, h4, h5, h6': { fontFamily: theme('fontFamily.roboto') },
         h1: {
-          fontSize: theme('fontSize.5xl'),
+          fontSize: theme('fontSize.6xl'),
         },
         h2: {
           fontSize: theme('fontSize.4xl'),

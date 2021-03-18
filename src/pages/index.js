@@ -8,8 +8,9 @@ import Footer from '@/components/footer';
 const HomePage = () => {
   useEffect(() => {
     Aos.init({
-      delay: 250,
+      delay: 100,
       duration: 1000,
+      offset: 50,
     });
     Aos.refresh();
   }, []);

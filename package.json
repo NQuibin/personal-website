@@ -27,6 +27,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
+    "react-particles-js": "^3.4.1",
     "react-tooltip": "^4.2.15",
     "sass": "^1.32.7",
     "tailwindcss": "^2.0.3"
@@ -50,8 +51,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

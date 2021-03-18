@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery } from 'gatsby';
 import {
   TiMail,
   TiSocialLinkedin,
@@ -7,6 +8,13 @@ import {
 } from 'react-icons/ti';
 
 const Footer = () => {
+  const resume = useStaticQuery(graphql`
+    query MyQuery {
+      file(relativePath: { eq: "nikki_quibin_resume.pdf" }) {
+        publicURL
+      }
+    }
+  `);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -23,7 +31,10 @@ const Footer = () => {
             </a>
           </li>
           <li className="mx-2">
-            <a href="https://github.com/NQuibin" className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700">
+            <a
+              href="https://github.com/NQuibin"
+              className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
+            >
               <TiSocialGithub className="text-4xl" />
             </a>
           </li>
@@ -36,7 +47,11 @@ const Footer = () => {
             </a>
           </li>
           <li className="mx-2">
-            <a href="#" className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700">
+            <a
+              href={resume.file.publicURL}
+              target="_blank"
+              className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
+            >
               <TiDocumentText className="text-4xl" />
             </a>
           </li>
