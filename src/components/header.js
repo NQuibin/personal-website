@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import { TiArrowSortedDown } from 'react-icons/ti';
 
 const Header = () => {
   return (
@@ -12,6 +13,10 @@ const Header = () => {
           <span className="text-4xl">Hello, I'm</span>
           <span className="text-purple-700">Nikki Quibin,</span>
           <span className="text-4xl">Software Developer</span>
+          <TiArrowSortedDown
+            className="self-center mt-12"
+            style={{ filter: 'drop-shadow(1px 1px rgba(0, 0, 0, 0.5))' }}
+          />
         </h1>
       </div>
       <Particles

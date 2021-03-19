@@ -25,6 +25,7 @@ const Footer = () => {
           <li className="mx-2">
             <a
               href="https://linkedin.com/in/nikki-louis-quibin-539ba796/"
+              rel="external"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
               <TiSocialLinkedin className="text-4xl" />
@@ -33,6 +34,7 @@ const Footer = () => {
           <li className="mx-2">
             <a
               href="https://github.com/NQuibin"
+              rel="external"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
               <TiSocialGithub className="text-4xl" />
@@ -50,6 +52,7 @@ const Footer = () => {
             <a
               href={resume.file.publicURL}
               target="_blank"
+              rel="external"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
               <TiDocumentText className="text-4xl" />

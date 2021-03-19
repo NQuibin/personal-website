@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import About from '@/components/about';
 import Experience from '@/components/experience';
 import Footer from '@/components/footer';
+import SEO from '@/components/seo';
 
 const HomePage = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const HomePage = () => {
 
   return (
     <>
+      <SEO title="Welcome" />
       <Header />
       <main>
         <About />
