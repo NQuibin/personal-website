@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
 const icons = {
@@ -15,18 +16,33 @@ const icons = {
   reactjs: require('@/assets/reactjs.svg'),
   vba: require('@/assets/vba.svg'),
   vue: require('@/assets/vue.svg'),
+  floral: require('@/assets/floral.svg'),
 };
 
-const Icon = ({ icon, tooltip, className }) => {
+const Icon = ({
+  icon,
+  tooltip = '',
+  className = '',
+  color = '#fff',
+  filter = '',
+}) => {
   const IconAsset = icons[icon];
   return (
     <>
       <span data-tip={tooltip}>
-        <IconAsset className={className} />
+        <IconAsset className={className} style={{ filter, fill: color }} />
         <ReactTooltip effect="solid" place="bottom" />
       </span>
     </>
   );
+};
+
+Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
+  tooltip: PropTypes.string,
+  className: PropTypes.string,
+  color: PropTypes.string,
+  filter: PropTypes.string,
 };
 
 export default Icon;

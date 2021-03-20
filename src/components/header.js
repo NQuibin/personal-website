@@ -1,10 +1,19 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { TiArrowSortedDown } from 'react-icons/ti';
+import Icon from '@/components/icon';
 
 const Header = () => {
   return (
     <header className="relative flex items-center justify-center text-center bg-purple-400 h-screen nq-bg-gradient-purple">
+      <Icon
+        icon="floral"
+        className="absolute top-0 left-0 w-16 h-16"
+      />
+      <Icon
+        icon="floral"
+        className="absolute top-0 right-0 transform rotate-90 w-16 h-16"
+      />
       <div className="absolute rounded-lg">
         <h1
           className="flex flex-col justify-center m-4 text-white nq-text-shadow"
@@ -39,8 +48,8 @@ const Header = () => {
               random: true,
             },
             move: {
-              direction: 'bottom',
-              out_mode: 'out',
+              direction: null,
+              speed: 1
             },
             line_linked: {
               enable: false,

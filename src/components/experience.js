@@ -19,7 +19,7 @@ const Experience = () => {
               <a
                 href={experience.link}
                 target="_blank"
-                rel="external"
+                rel="noreferrer"
                 className="hover:underline"
               >
                 {experience.company}
