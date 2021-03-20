@@ -23,7 +23,7 @@ const About = () => {
   ];
 
   return (
-    <Section title="Who I Am">
+    <Section title="Who I Am" id="about">
       <article className="flex flex-wrap items-center justify-center pb-10 md:flex-nowrap md:p-6 md:mx-auto md:text-center">
         <div
           className="rounded-full shadow-2xl bg-purple-700 mb-10 md:mb-0"

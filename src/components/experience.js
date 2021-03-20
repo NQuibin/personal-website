@@ -6,7 +6,7 @@ import { experiences } from '@/constants/experiences';
 
 const Experience = () => {
   return (
-    <Section title="Where I've Worked" bgClass="bg-purple-50">
+    <Section title="Where I've Worked" id="experience" bgClass="bg-purple-50">
       <div className="flex flex-wrap">
         {experiences.map((experience, index) => (
           <article

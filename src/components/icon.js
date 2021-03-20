@@ -16,7 +16,6 @@ const icons = {
   reactjs: require('@/assets/reactjs.svg'),
   vba: require('@/assets/vba.svg'),
   vue: require('@/assets/vue.svg'),
-  floral: require('@/assets/floral.svg'),
 };
 
 const Icon = ({

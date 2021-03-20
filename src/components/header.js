@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Particles from 'react-particles-js';
 import { TiArrowSortedDown } from 'react-icons/ti';
-import Icon from '@/components/icon';
 
 const Header = () => {
+  const headerRef = useRef(null);
+  const handleClick = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+  };
+
   return (
-    <header className="relative flex items-center justify-center text-center bg-purple-400 h-screen nq-bg-gradient-purple">
-      <Icon
-        icon="floral"
-        className="absolute top-0 left-0 w-16 h-16"
-      />
-      <Icon
-        icon="floral"
-        className="absolute top-0 right-0 transform rotate-90 w-16 h-16"
-      />
+    <header
+      className="relative flex items-center justify-center text-center bg-purple-400 h-screen nq-bg-gradient-purple"
+      ref={headerRef}
+    >
       <div className="absolute rounded-lg">
         <h1
           className="flex flex-col justify-center m-4 text-white nq-text-shadow"
@@ -22,10 +21,11 @@ const Header = () => {
           <span className="text-4xl">Hello, I'm</span>
           <span className="text-purple-700">Nikki Quibin,</span>
           <span className="text-4xl">Software Developer</span>
-          <TiArrowSortedDown
-            className="self-center mt-12"
-            style={{ filter: 'drop-shadow(1px 1px rgba(0, 0, 0, 0.5))' }}
-          />
+          <button className="self-center mt-12 focus:outline-none" onClick={handleClick}>
+            <TiArrowSortedDown
+              style={{ filter: 'drop-shadow(1px 1px rgba(0, 0, 0, 0.5))' }}
+            />
+          </button>
         </h1>
       </div>
       <Particles
@@ -44,12 +44,12 @@ const Header = () => {
               },
             },
             size: {
-              value: 8,
+              value: 4,
               random: true,
             },
             move: {
               direction: null,
-              speed: 1
+              speed: 2,
             },
             line_linked: {
               enable: false,
