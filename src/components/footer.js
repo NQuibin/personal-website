@@ -25,6 +25,7 @@ const Footer = () => {
           <li className="mx-2">
             <a
               href="https://linkedin.com/in/nikki-louis-quibin-539ba796/"
+              target="_blank"
               rel="noreferrer"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
@@ -34,6 +35,7 @@ const Footer = () => {
           <li className="mx-2">
             <a
               href="https://github.com/NQuibin"
+              target="_blank"
               rel="noreferrer"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
