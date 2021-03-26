@@ -1,11 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import {
-  TiMail,
-  TiSocialLinkedin,
-  TiSocialGithub,
-  TiDocumentText,
-} from 'react-icons/ti';
+  FaLinkedin,
+  FaGithub,
+  FaRegEnvelope,
+  FaRegFilePdf,
+} from 'react-icons/fa';
 
 const Footer = () => {
   const resume = useStaticQuery(graphql`
@@ -28,7 +28,7 @@ const Footer = () => {
               rel="noreferrer"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
-              <TiSocialLinkedin className="text-4xl" />
+              <FaLinkedin className="text-3xl" />
             </a>
           </li>
           <li className="mx-2">
@@ -37,7 +37,7 @@ const Footer = () => {
               rel="noreferrer"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
-              <TiSocialGithub className="text-4xl" />
+              <FaGithub className="text-3xl" />
             </a>
           </li>
           <li className="mx-2">
@@ -45,7 +45,7 @@ const Footer = () => {
               href="mailto:nikki.quibin@gmail.com"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
-              <TiMail className="text-4xl" />
+              <FaRegEnvelope className="text-3xl" />
             </a>
           </li>
           <li className="mx-2">
@@ -55,7 +55,7 @@ const Footer = () => {
               rel="noreferrer"
               className="inline-block p-2 rounded-full hover:bg-white hover:text-purple-700"
             >
-              <TiDocumentText className="text-4xl" />
+              <FaRegFilePdf className="text-3xl" />
             </a>
           </li>
         </ul>

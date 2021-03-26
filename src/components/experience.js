@@ -1,8 +1,13 @@
 import React from 'react';
-import { TiUserOutline, TiMap, TiCalendarOutline } from 'react-icons/ti';
+import {
+  HiOutlineExternalLink,
+  HiOutlineUser,
+  HiOutlineMap,
+  HiOutlineCalendar,
+} from 'react-icons/hi';
 import Section from '@components/section';
 import Icon from '@components/icon';
-import { experiences } from '@/constants/experiences';
+import { experiences } from '@constants/experiences';
 
 const Experience = () => {
   return (
@@ -20,21 +25,22 @@ const Experience = () => {
                 href={experience.link}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:underline"
+                className="hover:text-purple-600"
               >
                 {experience.company}
+                <HiOutlineExternalLink className="inline-block ml-1 mb-1 text-base" />
               </a>
             </h3>
             <h4 className="text-base">
-              <TiUserOutline className="mr-1 mb-0.5 inline-block text-2xl" />
+              <HiOutlineUser className="mr-1 mb-1 inline-block text-2xl" />
               {experience.title}
             </h4>
             <h4 className="text-base">
-              <TiMap className="mr-1 mb-0.5 inline-block text-2xl" />
+              <HiOutlineMap className="mr-1 mb-1 inline-block text-2xl" />
               {experience.location}
             </h4>
             <h4 className="mb-4 text-base">
-              <TiCalendarOutline className="mr-1 mb-0.5 inline-block text-2xl" />
+              <HiOutlineCalendar className="mr-1 mb-1 inline-block text-2xl" />
               {experience.duration}
             </h4>
             <p className="mb-4">{experience.description}</p>

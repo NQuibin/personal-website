@@ -62,6 +62,7 @@ export const experiences = [
     description: `A partner relationship management (PRM) platform that also helps
         companies build new revenue channels. Currently developing external APIs
         for customer use, and connectors for iPaaS software, Workato in particular.`,
+    link: 'https://www.partnerstack.com/',
     techStack: [
       technologies.vue,
       technologies.flask,

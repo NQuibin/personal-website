@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
-import Header from '@/components/header';
+import Header from '@components/header';
 import About from '@/components/about';
 import Experience from '@/components/experience';
 import Footer from '@/components/footer';
